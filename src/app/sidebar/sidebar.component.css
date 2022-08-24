@@ -1,0 +1,32 @@
+.modeDiv{
+    padding: 15px;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: grey;
+}
+
+
+.modeDiv:hover a{
+    color: white !important;
+}
+
+.modeDiv>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-but-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}

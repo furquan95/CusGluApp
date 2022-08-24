@@ -1,0 +1,16 @@
+<div class="sidebar" style="height: 100%;min-height: 900px;">
+    <div class="logo-but-text">
+        <h4>CustomerGlu</h4>
+    </div>
+    <div class="" id="side-menu" #sideMenu>
+          
+        <nav>
+            <ul>
+              <li class="modeDiv" *ngFor="let item of sidebarData">
+                  <div class=""><mat-icon [class]="item.icon">{{item.icon}}</mat-icon><a routerLink={{item.url}} routerLinkActive="active">&nbsp;&nbsp;&nbsp;{{item.field}}</a></div>
+              </li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
