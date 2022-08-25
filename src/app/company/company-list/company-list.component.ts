@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import {MatSort} from '@angular/material/sort';
+import {MatSort, Sort} from '@angular/material/sort';
 
 
 @Component({
@@ -22,6 +22,7 @@ export class CompanyListComponent implements AfterViewInit {
     
   dataSource = new MatTableDataSource<any>([]);
 
+  @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(){
     let companyData:any = localStorage.getItem('companyData');
@@ -49,6 +50,11 @@ export class CompanyListComponent implements AfterViewInit {
   ngAfterViewInit() {
     
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  sortAccordingly(event:Sort){
+    console.log(event)
   }
 }
 
